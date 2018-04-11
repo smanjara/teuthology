@@ -306,7 +306,7 @@ class TestBuildMatrix(object):
                 },
             },
         }
-        for info in [(fake_fs,'d1_2'), (fake_fs1,'d1_2$')]:
+        for info in [(fake_fs,'d0_0')]:
             fsv = info[0]
             dval = info[1]
             self.start_patchers(fsv)
