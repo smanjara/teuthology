@@ -306,12 +306,10 @@ class TestBuildMatrix(object):
                 },
             },
         }
-        for info in [(fake_fs,'d0_0'), (fake_fs, 'd0_0')]:
-            fsv = info[0]
-            dval = info[1]
-            self.start_patchers(fsv)
-            result = build_matrix.build_matrix(dval)
-            # assert len(result) == 4
+        for fvs in [fake_fs, fake_fs1]:
+            self.start_patchers(fvs)
+            result = build_matrix.build_matrix('d0_0')
+            assert len(result) == 4
 
     def test_emulate_teuthology_noceph(self):
         fake_fs = {
